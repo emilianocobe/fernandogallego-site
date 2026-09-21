@@ -28,7 +28,8 @@ charla *Introducción a la lectura de El Anti-Edipo* (19:00, Libario) + clase pe
 - [x] Landing centrada en una sola acción: comprar el pase (5 botones + barra fija en móvil).
 - [x] Todos los links a Passline llevan UTM (`utm_campaign=pase-sabado`, `utm_content=<ubicación>`) para saber qué botón vende.
 - [x] Imagen para compartir (Open Graph) y datos estructurados `Event` para Google.
-- [ ] Apuntar el dominio a GitHub Pages (ver abajo).
+- [x] Dominio apuntado a GitHub Pages con HTTPS (21/9/2026).
+- [x] Compra directa: los botones mandan al checkout de Passline sólo con el pase sábado (ticket 4527028, ver `assets/js/main.js`).
 - [ ] Link en la bio de Instagram → `https://fernandogallego.site/?utm_source=ig&utm_medium=social&utm_content=link_in_bio`.
 - [ ] Publicar la story/placa (1080×1920) y las "bajadas para placas" del documento de trabajo, una por día hasta el sábado.
 - [ ] Mensaje directo a asistentes de los ciclos anteriores (104 encuentros desde 2022: es el público más caliente).
@@ -45,9 +46,9 @@ charla *Introducción a la lectura de El Anti-Edipo* (19:00, Libario) + clase pe
 - Archivo de los nueve tramos (2022–2026) como biblioteca de lecturas.
 - Consolidar el posicionamiento del Brand Key: filosofía seria, textos exclusivamente filosóficos, accesible para profesionales de otras disciplinas.
 
-## Publicar en el dominio fernandogallego.site
+## Dominio fernandogallego.site
 
-Hoy el dominio apunta a Hostinger (WordPress). Para pasar al sitio nuevo, en **Hostinger → Dominios → fernandogallego.site → DNS**:
+Hecho el 21/9/2026. Respaldo de la zona anterior en `dns-backup-2026-09-21.txt` (fuera del repo). Configuración aplicada en **Hostinger → Dominios → fernandogallego.site → DNS**:
 
 1. Borrar los registros `A` de `@` actuales (147.79.105.59 y 77.37.42.105) y crear cuatro `A` para `@`:
    `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
