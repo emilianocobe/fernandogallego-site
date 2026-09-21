@@ -1,0 +1,10 @@
+# Material privado o pesado: NO va al repositorio público.
+# (backup de WordPress con datos personales de formularios, brandbook, fotos originales, documentos de trabajo)
+*.xml
+!sitemap.xml
+*.zip
+*.pdf
+*.pptx
+*.docx
+Thumbs.db
+.DS_Store
