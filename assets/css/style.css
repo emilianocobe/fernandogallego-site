@@ -246,3 +246,13 @@ em.obra, cite { font-style: italic; }
   html { scroll-behavior: auto; }
   .boton { transition: none; }
 }
+
+/* Selector de cantidad del pase */
+.cantidad { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin: 0 0 14px; font-family: var(--titulos); font-weight: 600; color: var(--blanco); }
+.cantidad select { background: var(--negro); color: var(--blanco); border: 1px solid var(--gris); padding: 8px 12px; font: inherit; border-radius: var(--radio); }
+.pases { max-width: 460px; }
+
+/* Sigla del ciclo: ILAE³ */
+.sigla { font-family: var(--titulos); font-weight: 700; letter-spacing: .04em; }
+.sigla sup { font-size: .6em; line-height: 0; vertical-align: super; }
+.hero .sigla { display: inline-block; color: var(--blanco); border: 1px solid var(--violeta); padding: .2em .6em; margin-bottom: 1rem; font-size: 1.05rem; }

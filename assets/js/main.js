@@ -14,6 +14,30 @@ if (toggle && nav) {
   );
 }
 
+// Compra directa del pase sábado: en vez de abrir la página del evento (que muestra
+// todos los pases), se envía el formulario de Passline sólo con el ticket del sábado
+// y el comprador cae directo en el checkout. Sin JS, el href lleva a la página del evento.
+const PASSLINE = { accion: "https://www.passline.com/carro-agregar-productos", evento: "546610", ticketSabado: "4527028" };
+const selectorCantidad = document.querySelector("[data-cantidad]");
+document.querySelectorAll("[data-passline]").forEach((enlace) =>
+  enlace.addEventListener("click", (e) => {
+    e.preventDefault();
+    const cantidad = Math.min(6, Math.max(1, parseInt(selectorCantidad?.value || "1", 10)));
+    const form = document.createElement("form");
+    form.method = "post";
+    form.action = PASSLINE.accion;
+    for (const [name, value] of [["id_evento", PASSLINE.evento], ["cantidad[]", `${cantidad}|${PASSLINE.ticketSabado}`]]) {
+      const input = document.createElement("input");
+      input.type = "hidden";
+      input.name = name;
+      input.value = value;
+      form.appendChild(input);
+    }
+    document.body.appendChild(form);
+    form.submit();
+  })
+);
+
 // Cuenta regresiva a la charla: sábado 3/10/2026, 19:00 (Buenos Aires, UTC-3)
 const INICIO = new Date("2026-10-03T19:00:00-03:00");
 const cuenta = document.querySelector("[data-cuenta]");
