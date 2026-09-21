@@ -50,7 +50,7 @@ charla *Introducción a la lectura de El Anti-Edipo* (19:00, Libario) + clase pe
 
 Hecho el 21/9/2026. Respaldo de la zona anterior en `dns-backup-2026-09-21.txt` (fuera del repo). Configuración aplicada en **Hostinger → Dominios → fernandogallego.site → DNS**:
 
-1. Borrar los registros `A` de `@` actuales (147.79.105.59 y 77.37.42.105) y crear cuatro `A` para `@`:
+1. Se borró el `ALIAS` de `@` (`fernandogallego.site.cdn.hstgr.net`, el WordPress) y se crearon cuatro `A` para `@`:
    `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
 2. `CNAME` de `www` → `emilianocobe.github.io`
 3. **No tocar los registros MX** (`mx1/mx2.hostinger.com.ar`): el correo `info@fernandogallego.site` sigue en Hostinger.
